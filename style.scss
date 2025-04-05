@@ -1,0 +1,160 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
+	background-color: #001404;
+	min-height: 100dvh;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.container {
+	padding: 50px;
+	border-radius: 20px;
+	box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.4);
+	max-width: 900px;
+	width: 100%;
+	background-color: #0b471f;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	border: 1px solid #646464;
+
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 900;
+
+		span {
+			text-decoration: underline;
+			text-underline-offset: 10px;
+			color: #000803;
+		}
+	}
+
+	.display-password {
+		padding: 0 15px;
+		margin: 15px 0;
+		background-color: #ffffff;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 15px;
+		width: 60%;
+		border-radius: 8px;
+		overflow: hidden;
+
+		input {
+			width: 100%;
+			padding: 20px 0 20px 15px;
+			border: none;
+			outline: none;
+			font-size: 20px;
+			color: #000803;
+			font-weight: 700;
+		}
+
+		.copy-btn {
+			border: none;
+			outline: none;
+			cursor: pointer;
+
+			svg {
+				fill: #0b471f;
+				width: 40px;
+				height: 40px;
+				transition: 200ms ease;
+			}
+
+			&:hover svg {
+				transform: scale(0.95);
+			}
+		}
+	}
+
+	.generate-btn {
+		background-color: #000803;
+		border: none;
+		outline: none;
+		padding: 20px 15px;
+		color: #ffffff;
+		font-size: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 15px;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: 200ms ease;
+
+		svg {
+			fill: #ffffff;
+			width: 40px;
+			height: 40px;
+		}
+
+		&:hover {
+			background-color: #001408;
+			transform: scale(1.02) skew(3deg);
+			box-shadow: 2px 2px rgba(255, 255, 255, 0.9);
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.container {
+		padding: 30px;
+
+		h2 {
+			text-align: center;
+			font-size: 1.8rem;
+		}
+
+		.display-password {
+			width: 90%;
+
+			input {
+				font-size: 18px;
+			}
+
+			.copy-btn svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		.generate-btn {
+			padding: 15px 10px;
+			font-size: 18px;
+
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 350px) {
+	.container {
+		padding: 15px;
+
+		h2 {
+			font-size: 1.3rem;
+		}
+
+		.display-password input {
+			padding: 10px 0 10px 10px;
+			font-size: 14px;
+		}
+	}
+}
